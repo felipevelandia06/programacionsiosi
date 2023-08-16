@@ -135,4 +135,12 @@ if pesototal>3000000:
   else: print('contendor no enviado')
 else: print('el peso total del pedido es', pesototal)'''
 
-#ejercicio 4  
+#Practica 3
+#ejercicio 1
+def numeros(a, b):
+  s=a+b
+  return s
+d=int(input('introduzca un número '))
+c=int(input('introduzca otro número '))
+suma=numeros(c,d)
+print(suma)
