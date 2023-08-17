@@ -137,10 +137,68 @@ else: print('el peso total del pedido es', pesototal)'''
 
 #Practica 3
 #ejercicio 1
-def numeros(a, b):
+'''def numeros(a, b):
   s=a+b
   return s
 d=int(input('introduzca un número '))
 c=int(input('introduzca otro número '))
 suma=numeros(c,d)
-print(suma)
+print(suma)'''
+
+#ejercicio 2
+'''def numeros(a,b):
+  r=a-b
+  return r
+c=int(input('introduzca un número '))
+d=int(input('introduzca otro número '))
+resta=numeros(c,d)
+print(resta)'''
+
+#ejercicio 3
+'''def numeros(a,b):
+  m=a*b
+  return m
+c=int(input('introduzca un números '))
+d=int(input('introduzca otro número '))
+multiplicación=numeros(c,d)
+print(multiplicación)'''
+
+#ejercicio 4
+'''def numeros(a, b):
+  if b==0:
+    print('no es posible realizar la división')
+  d=a/b 
+  return d
+n=int(input('introduzca un número '))
+m=int(input('introduzca otro número '))
+división=numeros(n,m)
+print(división)'''
+
+#ejercicio 5
+def entre(a, b):
+  d=a/b 
+  return d
+def por(a,b):
+    m=a*b
+    return m
+def menos(a,b):
+  r=a-b
+  return r
+def mas(a, b):
+  s=a+b
+  return s
+n=int(input('introduzca un valor '))
+f=int(input('introduzca otro valor '))
+división=entre(n,f)
+multiplicacion=por(n,f)
+resta=menos(n,f)
+suma=mas(n,f)
+operación=input('¿qué operación quiere realizar? ')
+if (operación=="+"):
+  print(suma)
+elif (operación=="-"):
+  print(resta)
+elif (operación=="*"):
+  print(multiplicacion)
+elif (operación=="/"):
+  print(división)
