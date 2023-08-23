@@ -264,6 +264,5 @@ def areafig():
     print(triangulo())
   else: print('coigo no valido')
 
-
 areafig()
   
