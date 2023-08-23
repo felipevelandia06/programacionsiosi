@@ -175,7 +175,7 @@ división=numeros(n,m)
 print(división)'''
 
 #ejercicio 5
-def entre(a, b):
+'''def entre(a, b):
   d=a/b 
   return d
 def por(a,b):
@@ -189,16 +189,81 @@ def mas(a, b):
   return s
 n=int(input('introduzca un valor '))
 f=int(input('introduzca otro valor '))
-división=entre(n,f)
-multiplicacion=por(n,f)
-resta=menos(n,f)
-suma=mas(n,f)
 operación=input('¿qué operación quiere realizar? ')
 if (operación=="+"):
+  suma=mas(n,f)
   print(suma)
 elif (operación=="-"):
+  resta=menos(n,f)
   print(resta)
 elif (operación=="*"):
+  multiplicacion=por(n,f)
   print(multiplicacion)
 elif (operación=="/"):
+  división=entre(n,f)
   print(división)
+else: print('operacion no valida')'''
+
+#ejercicio
+'''def intereses(inv):
+  d= inv
+  if (d >0 and d<1000000):
+    return 2 
+  elif(d>=1000000 and d<2000000):
+    return 5
+  else:
+    return 7
+
+def calBalance(int, inv):
+  n= int
+  d= inv
+  return round((d*(1+(n/100))),2)
+
+def ctaAhorro():
+  inversion = float(input('ingrese el valor de la inversion: '))
+  interes= intereses(inversion)
+  b1= calBalance(interes, inversion)
+  b2= calBalance (interes,b1)
+  b3= calBalance(interes,b2)
+  print("balace año 1: "+ str(b1) + "Balance año 2: " + str(b2) + str(b3))
+
+ctaAhorro()'''
+
+#ejercicio 2
+def menu():
+  print('''ingrese el codigo de la figura
+circulo 1
+cuadrado 2
+triangulo 3''')
+  
+  
+def circulo():
+  radio=float(input('igrese el valor del area '))
+  areacirculo=3.1416*radio**2
+  return(areacirculo)
+
+def cuadrado():
+  lado=float(input('ingrese el valor del lado '))
+  areacuadrado=lado*lado
+  return(areacuadrado)
+
+def triangulo():
+  base=float(input('ingrese el valor de la base '))
+  altura=float(input('ingrese el valor de la altura '))
+  areatriangulo=((base*altura)/2)
+  return(areatriangulo)
+
+def areafig():
+  menu()
+  figura=int(input('ingrese el codigo de la figura que desee '))
+  if figura==1:
+    print(circulo())
+  elif figura==2:
+    print(cuadrado())
+  elif figura==3:
+    print(triangulo())
+  else: print('coigo no valido')
+
+
+areafig()
+  
