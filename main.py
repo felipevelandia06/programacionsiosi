@@ -234,11 +234,13 @@ def menu():
   print('''ingrese el codigo de la figura
 circulo 1
 cuadrado 2
-triangulo 3''')
+triangulo 3
+pentagono regular 4
+rombo 5''')
   
   
 def circulo():
-  radio=float(input('igrese el valor del area '))
+  radio=float(input('igrese el valor del radio '))
   areacirculo=3.1416*radio**2
   return(areacirculo)
 
@@ -253,6 +255,21 @@ def triangulo():
   areatriangulo=((base*altura)/2)
   return(areatriangulo)
 
+def pentagonoregular():
+  perimetro=float(input('ingrese el valor del perimetro '))
+  apotema=float(input('ingrese el valor del apotema '))
+  areapentagonoregular=((perimetro*apotema)/2)
+  return(areapentagonoregular)
+
+def rombo():
+  diagonalmayor=float(input('ingrese el valor de la diagonal mayor '))
+  diagonalmenor=float(input('ingrese el valor de la diagoal menor '))
+  if diagonalmenor>diagonalmayor:
+    print('valores no validos')
+    arearombo=print('ingrese otra vez los valores')
+  else: arearombo=((diagonalmayor*diagonalmenor)/2)
+  return(arearombo)
+
 def areafig():
   menu()
   figura=int(input('ingrese el codigo de la figura que desee '))
@@ -262,6 +279,10 @@ def areafig():
     print(cuadrado())
   elif figura==3:
     print(triangulo())
+  elif figura==4:
+    print(pentagonoregular())
+  elif figura==5:
+    print(rombo())
   else: print('coigo no valido')
 
 areafig()
