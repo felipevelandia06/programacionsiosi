@@ -265,8 +265,7 @@ def rombo():
   diagonalmayor=float(input('ingrese el valor de la diagonal mayor '))
   diagonalmenor=float(input('ingrese el valor de la diagoal menor '))
   if diagonalmenor>diagonalmayor:
-    print('valores no validos')
-    arearombo=print('ingrese otra vez los valores')
+    arearombo=print('valores no validos')
   else: arearombo=((diagonalmayor*diagonalmenor)/2)
   return(arearombo)
 
