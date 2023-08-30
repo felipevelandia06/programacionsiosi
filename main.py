@@ -230,37 +230,31 @@ def ctaAhorro():
 ctaAhorro()'''
 
 #ejercicio 2
-def menu():
-  print('''ingrese el codigo de la figura
-circulo 1
+#'''def menu():
+ #''' print('''ingrese el codigo de la figura
+'''circulo 1
 cuadrado 2
 triangulo 3
 pentagono regular 4
-rombo 5''')
-  
-  
-def circulo():
+rombo 5)'''
+'''def circulo():
   radio=float(input('igrese el valor del radio '))
   areacirculo=3.1416*radio**2
   return(areacirculo)
-
 def cuadrado():
   lado=float(input('ingrese el valor del lado '))
   areacuadrado=lado*lado
   return(areacuadrado)
-
 def triangulo():
   base=float(input('ingrese el valor de la base '))
   altura=float(input('ingrese el valor de la altura '))
   areatriangulo=((base*altura)/2)
   return(areatriangulo)
-
 def pentagonoregular():
   perimetro=float(input('ingrese el valor del perimetro '))
   apotema=float(input('ingrese el valor del apotema '))
   areapentagonoregular=((perimetro*apotema)/2)
   return(areapentagonoregular)
-
 def rombo():
   diagonalmayor=float(input('ingrese el valor de la diagonal mayor '))
   diagonalmenor=float(input('ingrese el valor de la diagoal menor '))
@@ -268,7 +262,6 @@ def rombo():
     arearombo=print('valores no validos')
   else: arearombo=((diagonalmayor*diagonalmenor)/2)
   return(arearombo)
-
 def areafig():
   menu()
   figura=int(input('ingrese el codigo de la figura que desee '))
@@ -283,6 +276,41 @@ def areafig():
   elif figura==5:
     print(rombo())
   else: print('coigo no valido')
+#areafig()'''
 
-areafig()
-  
+#agosto 28
+#ejercicio 1
+def menu(): 
+  print(''' ingrese el codigo de la marca de su estereo
+Sonyo 1
+jbl 2
+samsung 3''')
+def descuentop(a):
+  descuento=(a-(a*0.1))
+  return(descuento)
+def descuentom(a):
+  descuento=a-(a*0.05)
+  return(descuento)
+def descuentopm(a):
+  descuento=a-(a*0.15)
+  return(descuento)
+def ivad(b):
+  preciototal=b+(0.2*b)
+  return(preciototal)
+def iva(c):
+  preciototal=c+0.2*c
+  return(preciototal)
+precio=float(input('ingrese el precio '))
+menu()
+marca=int(input('ingrese el codigo correspondiente a la marca del estereo '))
+if marca==2 or marca==3 and precio>2000000:
+  i=print(descuentop(precio))
+  print(ivad(i))
+elif marca==1 and precio<2000000:
+  i=print(descuentom(precio))
+  ivad(i)
+elif marca==1 and precio>2000000:
+  i=print(descuentopm(precio))
+  ivad(i)
+else: print(iva(precio))
+
