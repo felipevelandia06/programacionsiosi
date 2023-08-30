@@ -295,22 +295,25 @@ def descuentopm(a):
   descuento=a-(a*0.15)
   return(descuento)
 def ivad(b):
-  preciototal=b+(0.2*b)
+  preciototal=(b+(b*0.2))
   return(preciototal)
 def iva(c):
   preciototal=c+0.2*c
   return(preciototal)
-precio=float(input('ingrese el precio '))
-menu()
-marca=int(input('ingrese el codigo correspondiente a la marca del estereo '))
-if marca==2 or marca==3 and precio>2000000:
-  i=print(descuentop(precio))
-  print(ivad(i))
-elif marca==1 and precio<2000000:
-  i=print(descuentom(precio))
-  ivad(i)
-elif marca==1 and precio>2000000:
-  i=print(descuentopm(precio))
-  ivad(i)
-else: print(iva(precio))
+  
+def principal():
+  precio=float(input('ingrese el precio '))
+  menu()
+  marca=int(input('ingrese el codigo correspondiente a la marca del estereo '))
+  if marca==2 or marca==3 and precio>2000000:
+    ia=descuentop(precio)
+    print(ivad(ia))
+  elif marca==1 and precio<2000000:
+    i=descuentom(precio)
+    ivad(i)
+  elif marca==1 and precio>2000000:
+    i=descuentopm(precio)
+    ivad(i)
+  else: print(iva(precio))
 
+principal()
