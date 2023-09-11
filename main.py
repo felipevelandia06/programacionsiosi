@@ -280,40 +280,94 @@ def areafig():
 
 #agosto 28
 #ejercicio 1
-def menu(): 
-  print(''' ingrese el codigo de la marca de su estereo
+'''def menu(): 
+  ''''''print( ingrese el codigo de la marca de su estereo
 Sonyo 1
 jbl 2
-samsung 3''')
-def descuentop(a):
+samsung 3'''
+'''def descuentop(a):
   descuento=(a-(a*0.1))
-  return(descuento)
-def descuentom(a):
+  return(descuento)'''
+'''def descuentom(a):
   descuento=a-(a*0.05)
-  return(descuento)
-def descuentopm(a):
+  return(descuento)'''
+'''def descuentopm(a):
   descuento=a-(a*0.15)
-  return(descuento)
-def ivad(b):
+  return(descuento)'''
+'''def ivad(b):
   preciototal=(b+(b*0.2))
-  return(preciototal)
-def iva(c):
+  return(preciototal)'''
+'''def iva(c)
   preciototal=c+0.2*c
-  return(preciototal)
+  return(preciototal)'''
   
-def principal():
-  precio=float(input('ingrese el precio '))
+'''def principal():
+precio=float(input('ingrese el precio '))
   menu()
   marca=int(input('ingrese el codigo correspondiente a la marca del estereo '))
   if marca==2 or marca==3 and precio>2000000:
     ia=descuentop(precio)
     print(ivad(ia))
-  elif marca==1 and precio<2000000:
+    elif marca==1 and precio<2000000:
     i=descuentom(precio)
     ivad(i)
-  elif marca==1 and precio>2000000:
-    i=descuentopm(precio)
+  elif marca==1 and precio>2000000:'''
+'''i=descuentopm(precio)
     ivad(i)
-  else: print(iva(precio))
+  else: print(iva(precio'''
+
+'''principal()'''
+
+#septiembre 11
+#ejercicio1 
+'''A=0
+while A< 10:
+  print(A)
+  A=A+1'''
+
+#ejercicio2
+def menu():
+  print('''ingrese el codigo respectivo a la operación que quiera realizar
+  1. suma
+  2. resta
+  3. multiplicación
+  4. división
+  5. finalizar''')
+def entre(a, b):
+  d=a/b 
+  return d
+def por(a,b):
+    m=a*b
+    return m
+def menos(a,b):
+  r=a-b
+  return r
+def mas(a, b):
+  s=a+b
+  return s
+def principal():
+  n=float(input('introduzca un valor '))
+  f=float(input('introduzca otro valor '))
+  operación=0
+  menu()
+  while operación !=5:
+    operación=int(input('¿qué operación quiere realizar? '))
+    if operación==1:
+      suma=mas(n,f)
+      print(suma)
+    elif operación==2:
+      print('entre a la opción dos')
+      resta=menos(n,f)
+      print(resta)
+    elif operación==3:
+      multiplicacion=por(n,f)
+      print(multiplicacion)
+    elif operación==4:
+      división=entre(n,f)
+      print(división)
+    elif operación==5:
+      print('gracias')
+      break
+    else: print('operacion no valida')
 
 principal()
