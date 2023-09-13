@@ -326,13 +326,13 @@ while A< 10:
   A=A+1'''
 
 #ejercicio2
-def menu():
-  print('''ingrese el codigo respectivo a la operación que quiera realizar
+'''def menu():
+  print(ingrese el codigo respectivo a la operación que quiera realizar
   1. suma
   2. resta
   3. multiplicación
   4. división
-  5. finalizar''')
+  5. finalizar)
 def entre(a, b):
   d=a/b 
   return d
@@ -368,6 +368,32 @@ def principal():
     elif operación==5:
       print('gracias')
       break
-    else: print('operacion no valida')
+    else: print('operacion no valida')'''
+
+'''principal()'''
+
+#clase septiembre13
+#ejercicio1
+'''import random
+def principal():
+  c= random.randint(1, 100)
+  a=int(input('ingrese el número que crea que es '))
+  while c!=a:
+    if c>a:
+      print('el numero por adivinar es mayor al que ingresó')
+      a=int(input('ingrese otro número '))
+    elif c<a:
+      print('el numero por adivinar es menor al que ingresó')
+      a=int(input('ingrese otro número '))
+    
+  else: print('felicidades ingresó el número correcto')
+ 
+principal()'''
+#ejercicio2
+def principal():
+  a=int(input('ingrese un número '))
+  for c in range(1,11):
+      resultado= a*c
+      print(a, "x", c, "=", resultado)
 
 principal()
